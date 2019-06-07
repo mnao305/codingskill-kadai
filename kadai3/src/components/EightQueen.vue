@@ -1,8 +1,11 @@
 <template>
   <div class="main">
     <h1>エイト・クイーン</h1>
-    <a href="https://github.com/mnao305/codingskill-kadai/tree/master/kadai3"
-      >GitHubリポジトリ
+    <a
+      target="_blank"
+      href="https://github.com/mnao305/codingskill-kadai/tree/master/kadai3"
+    >
+      GitHubリポジトリ
     </a>
     <div class="board">
       <table>
