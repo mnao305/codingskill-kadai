@@ -1,4 +1,7 @@
 # kadai3
+エイト・クイーン
+
+[ここから試せます](https://eightqueen.mnao305.com/)
 
 ## Project setup
 ```
