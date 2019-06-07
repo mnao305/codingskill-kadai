@@ -1,6 +1,9 @@
 <template>
   <div class="main">
     <h1>エイト・クイーン</h1>
+    <a href="https://github.com/mnao305/codingskill-kadai/tree/master/kadai3"
+      >GitHubリポジトリ
+    </a>
     <div class="board">
       <table>
         <tr v-for="(item, i) in board" :key="i">
@@ -149,6 +152,13 @@ export default class EightQueen extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+h1 {
+  margin-bottom: 0;
+}
+a {
+  display: block;
+  margin-bottom: 10px;
+}
 table {
   margin: 0 auto;
   border-collapse: collapse;
