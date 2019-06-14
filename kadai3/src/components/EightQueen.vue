@@ -9,19 +9,21 @@
     </a>
     <div class="board">
       <table>
-        <tr v-for="(item, i) in board" :key="i">
+        <tr v-for="(items, i) in board" :key="i">
           <td
-            :class="item[j - 1]"
-            @click="tdClick(i, j - 1)"
-            v-for="j in 8"
+            :class="item"
+            @click="tdClick(i, j)"
+            v-for="(item, j) in items"
             :key="j"
           >
-            <template v-if="item[j - 1] !== 'X'">
-              {{ item[j - 1] }}
+            <template v-if="item !== 'X'">
+              {{ item }}
             </template>
           </td>
         </tr>
       </table>
+
+      <div class="score">{{ result }} / 8</div>
 
       <button @click="reset">リセット</button>
       <p v-if="result >= 8">8個揃いました！！！！</p>
@@ -155,37 +157,44 @@ export default class EightQueen extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h1 {
-  margin-bottom: 0;
-}
-a {
-  display: block;
-  margin-bottom: 10px;
-}
-table {
+.main {
+  width: 300px;
   margin: 0 auto;
-  border-collapse: collapse;
-  td {
-    width: 30px;
-    height: 30px;
+  h1 {
+    margin-bottom: 0;
   }
-  td:hover {
-    background-color: #e0f7fa;
+  a {
+    display: block;
+    margin-bottom: 10px;
   }
-  th,
-  td {
-    border: solid 1px #006064;
+  .score {
+    text-align: right;
   }
-  tr {
-    .Q {
-      background-color: #ff7043;
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    td {
+      width: 35px;
+      height: 35px;
     }
-    .X {
-      background-color: #ffab91;
+    td:hover {
+      background-color: #e0f7fa;
+    }
+    th,
+    td {
+      border: solid 1px #006064;
+    }
+    tr {
+      .Q {
+        background-color: #ff7043;
+      }
+      .X {
+        background-color: #ffab91;
+      }
     }
   }
-}
-button {
-  margin-top: 20px;
+  button {
+    margin-top: 20px;
+  }
 }
 </style>
