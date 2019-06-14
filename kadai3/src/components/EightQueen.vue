@@ -168,6 +168,7 @@ export default class EightQueen extends Vue {
     margin-bottom: 10px;
   }
   .score {
+    margin-top: 5px;
     text-align: right;
   }
   table {
