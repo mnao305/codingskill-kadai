@@ -59,12 +59,7 @@ export default class EightQueen extends Vue {
    * その周囲八方向のマスにはXを入れる。
    */
   tdClick(i: number, j: number) {
-    console.log(i, j)
-
-    if (this.board[i][j] === 'Q' || this.board[i][j] === 'X') {
-      console.log('押せないよ')
-      return
-    }
+    if (this.board[i][j] === 'Q' || this.board[i][j] === 'X') return
     // 横列
     for (let index = 0; index < this.board.length; index++) {
       if (this.board[i][index] === '') {
@@ -145,8 +140,6 @@ export default class EightQueen extends Vue {
    * クリア時にファンファーレを鳴らす
    */
   playAudio() {
-    console.log('hogefuga')
-
     const audio = new Audio()
     audio.src = '/audio/fanfare.mp3'
     audio.load()
