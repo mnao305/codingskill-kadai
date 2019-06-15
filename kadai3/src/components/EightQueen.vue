@@ -60,19 +60,16 @@ export default class EightQueen extends Vue {
    */
   tdClick(i: number, j: number) {
     if (this.board[i][j] === 'Q' || this.board[i][j] === 'X') return
-    // 横列
+    // 横列 縦列
     for (let index = 0; index < this.board.length; index++) {
       if (this.board[i][index] === '') {
         this.squares++
+        this.$set(this.board[i], index, 'X')
       }
-      this.$set(this.board[i], index, 'X')
-    }
-    // 縦列
-    for (let index = 0; index < this.board.length; index++) {
       if (this.board[index][j] === '') {
         this.squares++
+        this.$set(this.board[index], j, 'X')
       }
-      this.$set(this.board[index], j, 'X')
     }
     // 斜め方向 - 左上から右下
     let row: number
