@@ -167,6 +167,7 @@ export default class EightQueen extends Vue {
     td {
       width: 35px;
       height: 35px;
+      user-select: none;
     }
     td:hover {
       background-color: #e0f7fa;
