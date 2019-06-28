@@ -3,7 +3,7 @@
     <h1>エイト・クイーン</h1>
     <a
       target="_blank"
-      href="https://github.com/mnao305/codingskill-kadai/tree/master/kadai3"
+      href="https://github.com/mnao305/codingskill-kadai/tree/master/kadai3_eightQueen"
     >
       GitHubリポジトリ
     </a>
